@@ -1,0 +1,139 @@
+/* =========================
+   EXPERIENCE HERO SECTION
+========================= */
+
+.experience {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(2rem, 6vw, 6rem);
+    padding: clamp(2rem, 8vw, 8rem);
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional soft gradient background */
+.experience::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at 20% 30%,
+        rgba(255, 255, 255, 0.06),
+        transparent 60%
+    );
+    z-index: 0;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.experience h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================
+   TIMELINE CONTAINER
+========================= */
+
+.timeline {
+    width: min(1100px, 95%);
+    font-family: 'outfit', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================
+   GLASS JOB CARD
+========================= */
+
+.job-description {
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border-radius: clamp(1rem, 2vw, 1.5rem);
+
+    /* GLASSMORPHISM */
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+    transition: 
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Hover lift effect */
+.job-description:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   TEXT STYLING
+========================= */
+
+.job-title {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 600;
+}
+
+.job-city {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.job .job-duties {
+    padding-left: clamp(0.5rem, 1vw, 1rem);
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    line-height: 1.6;
+}
+
+.job-date {
+    font-family: 'outline', monospace;
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    opacity: 0.75;
+}
+
+/* =========================
+   ICON STYLING
+========================= */
+
+.job-icon {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.25),
+        rgba(255, 255, 255, 0.05)
+    );
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+}
+
+/* Timeline arrow glass effect */
+.vertical-timeline-element-content-arrow {
+    border-right: 10px solid rgba(255, 255, 255, 0.2);
+}
+
+.job-description:hover 
+.vertical-timeline-element-content-arrow {
+    border-right: 10px solid rgba(255, 255, 255, 0.5);
+}

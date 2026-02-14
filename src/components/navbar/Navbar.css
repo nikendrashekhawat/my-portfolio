@@ -1,0 +1,224 @@
+/* =========================================
+   NAVBAR CONTAINER (GLASS FLOATING)
+========================================= */
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: clamp(0.8rem, 2vw, 1.2rem)
+             clamp(1.5rem, 5vw, 4rem);
+
+    background: rgba(255, 255, 255, 0.297);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.nav-bar img {
+    width: clamp(45px, 5vw, 70px);
+    opacity: 0.85;
+    border-radius: 12px;
+
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.nav-bar img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+/* =========================================
+   NAV MENU (FLUID)
+========================================= */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 2rem);
+
+    list-style: none;
+    font-family: "outfit", sans-serif;
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+}
+
+.nav-menu li {
+    padding: clamp(0.3rem, 1vw, 0.6rem)
+             clamp(0.8rem, 2vw, 1.2rem);
+
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+/* =========================================
+   LINK STYLING
+========================================= */
+
+.anchor-link {
+    text-decoration: none;
+    color: var(--text);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Apply gradient text to the actual text element */
+.nav-menu li:hover a,
+.nav-menu li.active a {
+    background: var(--text-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Optional: keep the blurred pill background on the LI */
+.nav-menu li:hover,
+.nav-menu li.active {
+    background: rgba(168, 168, 168, 0.36);
+    backdrop-filter: blur(12px);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   THEME TOGGLE
+========================================= */
+
+.nav-theme-toggle {
+    padding: clamp(0.5rem, 1.5vw, 0.8rem);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.nav-theme-toggle:hover {
+    transform: rotate(180deg) scale(1.1);
+    box-shadow: 0 8px 20px rgba(73, 9, 129, 0.3);
+}
+
+.theme-icon {
+    width: clamp(18px, 2vw, 22px);
+    height: clamp(18px, 2vw, 22px);
+    color: var(--text);
+}
+
+
+/* =========================================
+   SCROLL PROGRESS BAR (MODERN GRADIENT)
+========================================= */
+
+.scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+
+    background: rgba(255, 255, 255, 0.08);
+    z-index: 1001;
+}
+
+.scroll-progress {
+    height: 100%;
+    width: 0;
+
+    background: linear-gradient(
+        90deg,
+        #f83f0b 0%,
+        #571183 100%
+    );
+
+    transition: width 0.1s ease-out;
+}
+
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+.mobile-nav-icon-open,
+.mobile-nav-icon-close {
+    display: none;
+}
+
+
+/* =========================================
+   MOBILE LAYOUT
+========================================= */
+
+@media (max-width: 768px) {
+
+    .nav-bar img {
+        display: none;
+    }
+
+    .mobile-nav-icon-open {
+        display: block;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(80%, 320px);
+
+        flex-direction: column;
+        justify-content: center;
+        gap: clamp(2rem, 6vw, 3rem);
+
+        background: rgba(20, 20, 20, 0.9);
+        backdrop-filter: blur(25px);
+
+        transition: right 0.4s ease;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .mobile-nav-icon-close {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .nav-theme-toggle {
+        background: none;
+        border: none;
+    }
+}

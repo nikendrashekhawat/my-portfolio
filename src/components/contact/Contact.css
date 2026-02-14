@@ -1,0 +1,251 @@
+/* ========================================
+   CONTACT HERO SECTION
+======================================== */
+
+.contact {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(2rem, 6vw, 6rem);
+    padding: clamp(2rem, 8vw, 8rem);
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Soft gradient glow background */
+.contact::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at 70% 20%,
+        rgba(255, 255, 255, 0.06),
+        transparent 60%
+    );
+    z-index: 0;
+}
+
+/* ========================================
+   SECTION TITLE
+======================================== */
+
+.contact h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   CONTACT LAYOUT
+======================================== */
+
+.contact-section {
+    width: min(1200px, 100%);
+    display: flex;
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   LEFT SIDE (INFO)
+======================================== */
+
+.contact-left {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 2vw, 2rem);
+    font-family: 'outfit', sans-serif;
+}
+
+.contact-left h2 span {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    background: var(--text-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-para {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.8;
+    opacity: 0.85;
+}
+
+/* Social methods */
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.8rem, 1.5vw, 1.2rem);
+}
+
+.contact-method-social {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 1rem);
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+}
+
+.contact-method-social a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.contact-icon {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: scale(1.15);
+    color: var(--text-border-color);
+}
+
+/* ========================================
+   RIGHT SIDE (GLASS FORM CARD)
+======================================== */
+
+.contact-right-form {
+    flex: 1 1 450px;
+
+    padding: clamp(2rem, 4vw, 3rem);
+    border-radius: clamp(1rem, 2vw, 1.5rem);
+
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+
+    font-family: 'outfit', sans-serif;
+
+    /* GLASSMORPHISM */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+    transition: transform 0.4s ease;
+}
+
+.contact-right-form:hover {
+    transform: translateY(-6px);
+}
+
+/* ========================================
+   FORM FIELDS
+======================================== */
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 1vw, 1rem);
+}
+
+.contact-details label {
+    font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+    font-weight: 500;
+}
+
+/* Input + Textarea */
+
+.contact-details input,
+.contact-details textarea {
+    width: 100%;
+    padding: clamp(0.8rem, 1.5vw, 1rem);
+
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+
+    color: var(--text);
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-details input:focus,
+.contact-details textarea:focus {
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+textarea {
+    min-height: clamp(120px, 20vw, 180px);
+    resize: vertical;
+}
+
+/* ========================================
+   ERROR STATES
+======================================== */
+
+.error {
+    border: 1px solid red !important;
+}
+
+.error-message {
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+    color: red;
+}
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.contact-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 1rem);
+
+    width: fit-content;
+    align-self: center;
+
+    padding: clamp(0.8rem, 1.5vw, 1rem)
+             clamp(1.5rem, 3vw, 2rem);
+
+    border-radius: 999px;
+    border: none;
+
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.05)
+    );
+
+    backdrop-filter: blur(12px);
+
+    color: var(--text);
+    cursor: pointer;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-submit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.submit-icon {
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+}

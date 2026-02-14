@@ -1,0 +1,202 @@
+/* ===============================
+   PROFILE CONTAINER
+=================================*/
+
+.profile {
+    margin: 0;
+    padding: clamp(4rem, 10vw, 10rem);
+    padding-top: clamp(6rem, 15vw, 12rem);
+    padding-bottom: clamp(6rem, 15vw, 12rem);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(2rem, 6vw, 5rem);
+
+    position: relative;
+}
+
+
+/* ===============================
+   ANIMATED BACKGROUND
+=================================*/
+
+.profile::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--header-img);
+    opacity: var(--header-img-opacity);
+    background-size: 140% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    animation: waveFloat 40s ease-in-out infinite alternate,
+               bg-pan-bl 60s ease-in-out infinite alternate;
+}
+
+@keyframes waveFloat {
+    0%   { background-position: 0% 45%; transform: rotate(-5deg) scale(1.05); }
+    50%  { background-position: 100% 55%; transform: rotate(5deg) scale(1.1); }
+    100% { background-position: 50% 50%; transform: rotate(-5deg) scale(1.05); }
+}
+
+@keyframes bg-pan-bl {
+    0%   { background-position: 0% 100%; }
+    100% { background-position: 100% 0%; }
+}
+
+
+/* ===============================
+   PROFILE IMAGE
+=================================*/
+
+.profile-picture img {
+    width: clamp(10rem, 25vw, 20rem);
+    border-radius: 50%;
+    margin: clamp(10px, 3vw, 30px) 0;
+
+    box-shadow: 
+        0 8px 30px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(255, 0, 150, 0.2);
+
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.profile-picture img:hover {
+    transform: scale(1.08);
+    box-shadow:
+        0 10px 35px rgba(248, 63, 11, 0.5),
+        0 0 30px rgba(255, 0, 150, 0.3);
+}
+
+
+/* ===============================
+   GLASS PROFILE CARD
+=================================*/
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.05);
+
+    max-width: 700px;
+    width: 100%;
+
+    /* animation: floatCard 6s ease-in-out infinite alternate; */
+}
+
+/* @keyframes floatCard {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-10px); }
+} */
+
+
+/* ===============================
+   TYPOGRAPHY (FLUID)
+=================================*/
+
+.profile-info h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 600;
+    font-family: serif;
+}
+
+.profile-info p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-family: "outfit";
+    font-weight: 500;
+}
+
+
+/* ===============================
+   ICONS
+=================================*/
+
+.profile-icons-top{
+    display: flex;
+    gap: clamp(0.5rem, 1vw, 1.5rem);
+}
+.profile-icons-bottom {
+    display: none;
+}
+
+.profile-icon {
+    cursor: pointer;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    color: var(--text);
+    transition: transform 0.4s ease;
+}
+
+.profile-icon:hover {
+    transform: scale(1.2);
+}
+
+
+/* ===============================
+   CONNECT BUTTONS (GLASS STYLE)
+=================================*/
+
+.profile-connect {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 2rem);
+    margin-top: clamp(1rem, 3vw, 2rem);
+}
+
+.profile-connect-contact,
+.profile-connect-resume {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: clamp(0.7rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.profile-connect-contact:hover,
+.profile-connect-resume:hover {
+    transform: translateY(-4px);
+    border-color: #490981;
+    box-shadow: 0 5px 20px rgba(73, 9, 129, 0.4);
+}
+
+.download-icon-resume {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+
+/* ===============================
+   OPTIONAL: Disable Heavy Animations on Small Screens
+=================================*/
+
+@media (max-width: 768px) {
+    .profile::before {
+        animation: none;
+    }
+}

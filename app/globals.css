@@ -1,26 +1,55 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root[data-theme="light"] {
+  --background: #f8f3f3;
+  --background-second: #f8f8f6;
+  --text: #161513;
+  --background-gradient: linear-gradient(267deg, #f83f0b 30%, #571183 102.06%);
+  --text-gradient: linear-gradient(90deg, #ef3c0b 20%, #571183 100%);
+  --nav-bg: rgba(254, 247, 237, 0.95);
+  --nav-shadow: 0 4px 8px rgba(23, 22, 22, 0.555), 0 6px 20px rgba(0, 0, 0, 0.1);
+  --header-img: url('/bg_light.png');
+  --header-img-opacity: 0.3;
+  --overlay-bg-color: linear-gradient(rgba(71, 15, 106, 0.855), #c3380e 50%);
+  --flex-chip-bg-color:#d0d0d0;
+  --text-border-color: #7900e2;
+  --input-bg-color: #d0d0d0;
+  --submit-bg-color: #b7b7b7;
+  --job-description-box-shadow: 0 5px 15px rgb(248, 63, 11), 0 0 15px 10px rgba(161, 0, 225, 0.55);
+  --job-content-arrow-color: #5d0ca4;
+  --mob-nav-menu-bg-color: rgb(232, 219, 211);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root[data-theme="dark"] {
+  --background: #161513;
+  --background-second: #201f2086;
+  --text: #f8f3f3;
+  --background-gradient: linear-gradient(267deg, #f83f0b 30%, #571183 102.06%);
+  --text-gradient: linear-gradient(90deg, #f83f0b 20%, #571183 100%);
+  --nav-bg: rgba(22, 21, 19, 0.95);
+  --nav-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  --header-img: url('/bg_dark.png');
+  --header-img-opacity: 0.2;
+  --overlay-bg-color: linear-gradient(rgba(69, 18, 101, 0.566), #c3380e 110%);
+  --flex-chip-bg-color:#f7f1e8;
+  --text-border-color: #f83f0b;
+  --input-bg-color: #313132;
+  --submit-bg-color: #3f3f3f;
+  --job-description-box-shadow: 0 5px 15px rgb(248, 63, 11), 0 0 15px 10px rgba(255, 0, 150, 0.2);
+  --job-content-arrow-color: #e53200;
+  --mob-nav-menu-bg-color: rgb(29, 25, 30);
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
