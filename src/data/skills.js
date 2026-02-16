@@ -1,3 +1,4 @@
+
 const certificate_1 = "/Coursera_AWS_Fundamentals.png";
 const certificate_2 = "/Coursera_AWS_Solutions_Architect.png";
 const certificate_3 = "/Coursera_AWS_Cloud_Solutions.png";
@@ -57,14 +58,14 @@ const cloudtools = [
 ];
 
 const certifications = [
-  { name: "AWS Fundamentals", img: certificate_1 },
-  { name: "AWS Cloud Solutions Architect", img: certificate_2 },
-  { name: "AWS Cloud Support Associate", img: certificate_3 },
-  { name: "Data Engineering & Big Data on GCP", img: certificate_4 },
-  { name: "Networking in Google Cloud", img: certificate_5 },
-  { name: "Google IT Automation with Python", img: certificate_6 },
-  { name: "Packt Terraform Masterclass", img: certificate_7 },
-  { name: "Packt Docker & Kubernetes Masterclass", img: certificate_8 }
+  { name: "AWS Fundamentals", img: certificate_1, ref: "https://www.coursera.org/account/accomplishments/specialization/DNFDTQ5NUGHA" },
+  { name: "AWS Cloud Solutions Architect", img: certificate_2, ref: "https://www.coursera.org/account/accomplishments/specialization/DNFDTQ5NUGHA" },
+  { name: "AWS Cloud Support Associate", img: certificate_3, ref: "https://www.coursera.org/account/accomplishments/specialization/DNFDTQ5NUGHA" },
+  { name: "Data Engineering & Big Data on GCP", img: certificate_4, ref: "https://www.coursera.org/account/accomplishments/specialization/DNFDTQ5NUGHA" },
+  { name: "Networking in Google Cloud", img: certificate_5, ref: "https://www.coursera.org/account/accomplishments/specialization/DNFDTQ5NUGHA" },
+  { name: "Google IT Automation with Python", img: certificate_6, ref: "https://www.coursera.org/account/accomplishments/certificate/9Z5KZ6QG8Z3L" },
+  { name: "Packt Terraform Masterclass", img: certificate_7, ref: "https://www.coursera.org/account/accomplishments/certificate/9Z5KZ6QG8Z3L" },
+  { name: "Packt Docker & Kubernetes Masterclass", img: certificate_8, ref: "https://www.coursera.org/account/accomplishments/certificate/9Z5KZ6QG8Z3L" }
 ];
 
 

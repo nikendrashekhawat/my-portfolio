@@ -44,6 +44,7 @@ const Profile = () => {
           <div className="profile-icons-bottom">
           <a href="https://www.github.com/nikendrashekhawat"> <FontAwesomeIcon className="profile-icon" icon={faSquareGithub} /></a>
           <a href="https://www.linkedin.com/in/nikendrashekhawat/"> <FontAwesomeIcon className="profile-icon" icon={faLinkedin} /></a>
+          <a href="https://www.instagram.com/nikendrashekhawat"> <FontAwesomeIcon className="profile-icon" icon={faInstagram} /></a>
         </div>
         </div>
     </div>

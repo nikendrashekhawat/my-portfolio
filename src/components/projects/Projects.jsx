@@ -38,13 +38,13 @@ const Projects = () => {
                 ))}
               </div>
               <div className="project-link-icons">
-                <a href={project.link} target="_blank">
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
                   <span>Visit Link</span>
-                  <FontAwesomeIcon href={project.github} target="_blank" className="project-icon" icon={faLink} />
+                  <FontAwesomeIcon className="project-icon" icon={faLink} />
                 </a>
-                <a href={project.github} target="_blank">
+                <a href={project.github} target="_blank" rel="noopener noreferrer">
                   <span>View Code</span>
-                  <FontAwesomeIcon href={project.github} target="_blank" className="project-icon" icon={faFileCode} />
+                  <FontAwesomeIcon className="project-icon" icon={faFileCode} />
                 </a>
               </div>
             </div>
