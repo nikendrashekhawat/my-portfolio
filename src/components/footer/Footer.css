@@ -20,7 +20,7 @@
     overflow: hidden;
 
     /* GLASSMORPHISM */
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.101);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 
@@ -86,7 +86,11 @@
 
 .footer-copyright {
     font-size: clamp(0.8rem, 1vw, 0.95rem);
-    opacity: 0.75;
+    opacity: 0.8;
+    p {
+        font-family: Verdana, sans-serif;
+        color: var(--text);
+    }
 }
 
 

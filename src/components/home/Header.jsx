@@ -7,14 +7,14 @@ import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
 import './Header.css';
 
 const profile_image = "/profile_img.png";
-const resume ="/resume.pdf";
+const resume ="/Nikendra_Rajpoot_Resume_DE.pdf";
 
 
 const Profile = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = resume;
-    link.download = 'Nikendra_Shekhawat_Resume.pdf';
+    link.download = 'Nikendra_Rajoot_Resume_DE.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

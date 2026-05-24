@@ -95,15 +95,19 @@
 .contact-method-social {
     display: flex;
     align-items: center;
-    gap: clamp(0.5rem, 1vw, 1rem);
-    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    gap: clamp(0.2rem, 0.5vw, 1rem);
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
 }
 
-.contact-method-social a {
-    text-decoration: none;
+.contact-method-social a{
+    font-family: Verdana, sans-serif;
+    font-style: italic;
     color: var(--text);
 }
 
+.contact-method-social a p {
+    transition: transform 0.3s ease;
+}
 .contact-icon {
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     transition: transform 0.3s ease, color 0.3s ease;
@@ -113,6 +117,14 @@
     transform: scale(1.15);
     color: var(--text-border-color);
 }
+
+
+.contact-method-social a:hover p {
+    transform: scale(1.05);    
+    color: var(--text-border-color);
+    text-decoration: underline;
+}
+
 
 /* ========================================
    RIGHT SIDE (GLASS FORM CARD)
@@ -171,9 +183,9 @@
     padding: clamp(0.8rem, 1.5vw, 1rem);
 
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(101, 99, 99, 0.737);
 
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 254, 254, 0.712);
     backdrop-filter: blur(8px);
 
     color: var(--text);

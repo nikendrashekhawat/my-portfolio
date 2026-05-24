@@ -5,6 +5,9 @@ import { faSquareGithub, faLinkedin, faInstagram } from '@fortawesome/free-brand
 import './Footer.css'
 
 const Footer = () => {
+  
+  const currentYear = new Date().getFullYear();
+
   return (
     <div id="footer" className='footer'>
         <hr/>
@@ -15,7 +18,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/nikendrashekhawat"><FontAwesomeIcon className='footer-icon' icon={faInstagram} /></a>
           </div>
           <div className="footer-copyright">
-            <p>©2026 Nikendra Shekhawat</p>
+            <p>©{currentYear} Nikendra Shekhawat</p>
           </div>
         </div>
     </div>

@@ -15,8 +15,10 @@
     padding: clamp(2rem, 8vw, 8rem);
 
     position: relative;
-    overflow: hidden;
-
+    overflow: hidden; 
+    
+    background: var(--background-second);
+    
     box-sizing: border-box;
 }
 
@@ -197,12 +199,13 @@
 
 .project-overlay .MuiChip-root {
     font-size: clamp(0.7rem, 1vw, 0.85rem);
-    /* transition: transform 0.2s ease; */
+    transition: transform 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
-/* .project-overlay .MuiChip-root:hover {
-    transform: scale(1.05);
-} */
+.project-overlay .MuiChip-root:hover {
+    transform: translateY(-1px);
+    border: #f2524f 2px solid;
+}
 
 /* =========================================
    PROJECT LINKS
@@ -233,10 +236,15 @@
 
     transition: 0.3s ease, color 0.3s ease;
 
+    .project-icon {
+        font-size: clamp(0.8rem, 1vw, 1.2rem);
+    }
+            
     span {
         font-family: Verdana, sans-serif;
         font-size: clamp(0.5rem, 1vw, 1.2rem);
     }
+
 }
 
 .project-link-icons a:hover {
@@ -250,24 +258,6 @@
 ========================================= */
 
 .show-more-btn {
-    /* display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: clamp(0.2rem, 0.5vw, 0.4rem);
-
-    padding: clamp(0.6rem, 1.5vw, 1rem);
-
-    border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-
-    font-size: clamp(0.9rem, 1.3vw, 1rem);
-    color: var(--text);
-
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; */
 
 
     display: inline-flex;

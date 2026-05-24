@@ -23,10 +23,10 @@ const main_tools = [
 ];
 
 const python_libraries = [
-  "Apache Kafka",
+  "Kafka",
+  "PyFlink",
   "PySpark",
   "Airflow",
-  "Apache Flink",
   "Apache Beam",
   "Prefect",
   "Pandas",

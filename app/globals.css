@@ -19,7 +19,7 @@
   --header-img-opacity: 0.3;
   --overlay-bg-color: linear-gradient(rgba(71, 15, 106, 0.855), #c3380e 50%);
   --flex-chip-bg-color:#d0d0d0;
-  --text-border-color: #7900e2;
+  --text-border-color: #7800e2;
   --input-bg-color: #d0d0d0;
   --submit-bg-color: #b7b7b7;
   --job-description-box-shadow: 0 5px 15px rgb(248, 63, 11), 0 0 15px 10px rgba(161, 0, 225, 0.55);
@@ -39,7 +39,7 @@
   --header-img-opacity: 0.2;
   --overlay-bg-color: linear-gradient(rgba(69, 18, 101, 0.566), #c3380e 110%);
   --flex-chip-bg-color:#f7f1e8;
-  --text-border-color: #f83f0b;
+  --text-border-color: #ff582ace;
   --input-bg-color: #313132;
   --submit-bg-color: #3f3f3f;
   --job-description-box-shadow: 0 5px 15px rgb(248, 63, 11), 0 0 15px 10px rgba(255, 0, 150, 0.2);
